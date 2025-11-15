@@ -1,21 +1,35 @@
 package models;
 
+/**
+ * Representa a entidade Veterinario (profissional da clínica).
+ * <p>
+ * Esta é uma classe "Model" ou "POJO" (Plain Old Java Object) que
+ * armazena dados. Seus atributos são privados (Encapsulamento).
+ */
 public class Veterinario {
     //Atributos da classe
     private int id;
     private String nome;
     private String telefone;
-    private String crmv;
+    private String crmv; // Conselho Regional de Medicina Veterinária
 
-    //Construtor
-    public Veterinario(int id, String nome, String telefone, String crmv) {
+    /**
+     * Construtor da classe Veterinario.
+     *
+     * @param id       O ID (gerenciado pelo Controller).
+     * @param nome     O nome do profissional.
+     * @param telefone O telefone de contato.
+     * @param crmv     O registro profissional (ex: "CRMV-SP 12345").
+     */
+    public Veterinario(int id, String nome, String telefone, String crmv) { //
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.crmv = crmv;
     }
 
-    //Getters e Setters
+    // --- Getters e Setters ---
+
     public int getId() {
         return id;
     }
@@ -48,14 +62,20 @@ public class Veterinario {
         this.crmv = crmv;
     }
 
-    //toString para dados formatados
+    /**
+     * Sobrescreve o método toString() padrão.
+     *
+     * @return Uma representação textual (String) do objeto Veterinario.
+     */
     @Override
     public String toString() {
-        return "Veterinario {" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", crmv='" + crmv + '\'' +
-                '}';
+        // ALTERAÇÃO: Usando String.format para uma saída mais limpa
+        return String.format(
+                "ID: %-3d | Nome: %-20s | Telefone: %-15s | CRMV: %s",
+                id,
+                nome,
+                telefone,
+                crmv
+        );
     }
 }

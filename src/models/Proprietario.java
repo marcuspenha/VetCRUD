@@ -1,5 +1,11 @@
 package models;
 
+/**
+ * Representa a entidade Proprietario (dono do pet).
+ * <p>
+ * Esta é uma classe "Model" ou "POJO" (Plain Old Java Object) que
+ * armazena dados. Seus atributos são privados (Encapsulamento).
+ */
 public class Proprietario {
 
     private int id;
@@ -7,14 +13,24 @@ public class Proprietario {
     private String telefone;
     private String endereco;
 
-    public Proprietario(int id, String nome, String telefone, String endereco) {
+    /**
+     * Construtor da classe Proprietario.
+     *
+     * @param id       O ID (gerenciado pelo Controller).
+     * @param nome     O nome do proprietário.
+     * @param telefone O telefone de contato.
+     * @param endereco O endereço do proprietário.
+     */
+    public Proprietario(int id, String nome, String telefone, String endereco) { //
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.endereco = endereco;
     }
 
-    // Getters e Setters
+    // --- Getters e Setters ---
+    // (Padrão JavaBeans para encapsulamento)
+
     public int getId() {
         return id;
     }
@@ -47,13 +63,20 @@ public class Proprietario {
         this.endereco = endereco;
     }
 
+    /**
+     * Sobrescreve o método toString() padrão.
+     *
+     * @return Uma representação textual (String) do objeto Proprietario.
+     */
     @Override
     public String toString() {
-        return "Proprietario {" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", endereco='" + endereco + '\'' +
-                '}';
+        // ALTERAÇÃO: Usando String.format para uma saída mais limpa
+        return String.format(
+                "ID: %-3d | Nome: %-20s | Telefone: %-15s | Endereço: %s",
+                id,
+                nome,
+                telefone,
+                endereco
+        );
     }
 }
