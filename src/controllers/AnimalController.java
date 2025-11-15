@@ -67,8 +67,9 @@ public class AnimalController {
     /**
      * Atualiza os dados de um animal existente com base no ID.
      * <p>
-     * Nota: Este método simples atualiza apenas os campos definidos na
-     * superclasse {@link Animal}.
+     * ALTERAÇÃO ESTRUTURAL:
+     * Adicionado 'setProprietarioId' para refletir a mudança no model.
+     * Isso permite que a interface (Peão 2) possa alterar o dono de um animal.
      *
      * @param id         O ID do animal a ser atualizado.
      * @param novoAnimal Um objeto {@link Animal} com os *novos* dados.
@@ -88,8 +89,10 @@ public class AnimalController {
         existente.setNome(novoAnimal.getNome());
         existente.setIdade(novoAnimal.getIdade());
         existente.setEspecie(novoAnimal.getEspecie());
-        // Se Cachorro/Gato tivessem campos próprios,
-        // seria necessário um "instanceof" para atualizá-los.
+
+        // --- CORREÇÃO APLICADA AQUI ---
+        // Atualiza o ID do proprietário, permitindo a transferência do animal
+        existente.setProprietarioId(novoAnimal.getProprietarioId());
 
         return true;
     }
