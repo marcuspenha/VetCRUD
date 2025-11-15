@@ -43,3 +43,4 @@ Este projeto foi desenvolvido para ser executado em uma IDE Java (como o **Intel
 ## Autor
 
 Marcus Gutierrz Vieira Penha
+Marcos Vinicius Fernandes Sabino
