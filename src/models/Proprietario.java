@@ -1,7 +1,7 @@
 package models;
 
 /**
- * Representa a entidade Proprietario (dono do pet).
+ * Representa a entidade Proprietario.
  * <p>
  * Esta é uma classe "Model" ou "POJO" (Plain Old Java Object) que
  * armazena dados. Seus atributos são privados (Encapsulamento).
@@ -29,7 +29,6 @@ public class Proprietario {
     }
 
     // --- Getters e Setters ---
-    // (Padrão JavaBeans para encapsulamento)
 
     public int getId() {
         return id;
@@ -70,7 +69,7 @@ public class Proprietario {
      */
     @Override
     public String toString() {
-        // ALTERAÇÃO: Usando String.format para uma saída mais limpa
+        // Usando String.format para uma saída mais limpa
         return String.format(
                 "ID: %-3d | Nome: %-20s | Telefone: %-15s | Endereço: %s",
                 id,
