@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MenuPrincipal {
     Scanner sc = new Scanner(System.in);
     MenuAnimal menuAnimal = new MenuAnimal();
+    MenuProprietario menuProprietario = new MenuProprietario();
 
     public void mostrarMenuPrincipal() {
         int opcao;
@@ -24,6 +25,7 @@ public class MenuPrincipal {
                     menuAnimal.mostrarMenuAnimal();
                     break;
                 case 2:
+                    menuProprietario.mostrarMenuProprietario();
                     break;
                 case 3:
                     break;
