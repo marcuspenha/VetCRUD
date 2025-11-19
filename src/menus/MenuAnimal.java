@@ -67,6 +67,19 @@ public class MenuAnimal {
                                 System.out.print("Nome: ");
                                 gato.setNome(sc.nextLine());
 
+                                System.out.print("Idade: ");
+                                gato.setIdade(sc.nextInt());
+
+                                System.out.print("Sexo: ");
+                                gato.setSexo()
+
+                                System.out.print("Espécie: ");
+                                gato.setEspecie(sc.nextLine());
+
+
+
+
+
                                 
 
 
