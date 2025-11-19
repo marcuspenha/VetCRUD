@@ -11,13 +11,14 @@ public class MenuPrincipal {
         int opcao;
 
         do {
-            System.out.println("\n=== Clinica Veterinária - Menu Principal ===");
+            System.out.println("\n=== Clinica Veterinária ===");
+            System.out.println("----- Menu Principal -----");
             System.out.println("1. Gerenciar Animais");
             System.out.println("2. Gerenciar Proprietários");
             System.out.println("3. Gerenciar Serviços");
             System.out.println("4. Gerar Relatórios");
             System.out.println("0. Sair");
-            System.out.println("Escolha uma opção:");
+            System.out.print("Escolha uma opção:");
             opcao = sc.nextInt();
 
             switch(opcao) {

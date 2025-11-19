@@ -11,12 +11,14 @@ public class MenuProprietario {
     public void mostrarMenuProprietario() {
         int opcao;
         do {
-            System.out.println("\n=== Menu Proprietário ===");
+            System.out.println("\n=== Clinica Veterinária ===");
+            System.out.println("--- Menu Proprietário ---");
             System.out.println("1. Listar Proprietários");
             System.out.println("2. Criar Proprietários");
             System.out.println("3. Deletar Proprietários");
             System.out.println("4. Atualizar Proprietários");
             System.out.println("0. Voltar");
+            System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
             sc.nextLine();
 
@@ -45,17 +47,15 @@ public class MenuProprietario {
         ProprietarioController proprietarioController = new ProprietarioController();
         Proprietario proprietario = new Proprietario();
 
-        System.out.println("Nome: ");
+        System.out.println("\nCriar Proprietário:");
+        System.out.print("Nome: ");
         proprietario.setNome(sc.nextLine());
-        sc.nextLine();
 
-        System.out.println("Telefone: ");
+        System.out.print("Telefone: ");
         proprietario.setTelefone(sc.nextLine());
-        sc.nextLine();
 
-        System.out.println("Endereço:  ");
+        System.out.print("Endereço: ");
         proprietario.setEndereco(sc.nextLine());
-        sc.nextLine();
 
         proprietarioController.create(proprietario);
         System.out.println("Proprietário Cadastrado!");

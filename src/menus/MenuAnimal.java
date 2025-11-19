@@ -2,6 +2,7 @@ package menus;
 
 import controllers.AnimalController;
 import models.Cachorro;
+import models.Gato;
 import models.Proprietario;
 
 import java.util.Scanner;
@@ -14,18 +15,20 @@ public class MenuAnimal {
     public void mostrarMenuAnimal() {
         int opcao;
         do {
-            System.out.println("\n=== Gerenciar Animais ===");
+            System.out.println("\n=== Clinica Veterinária ===");
+            System.out.println("---- Gerenciar Animais ----");
             System.out.println("1. Listar Animais");
             System.out.println("2. Adicionar Animais");
             System.out.println("3. Atualizar Animais");
             System.out.println("0. Voltar");
-            System.out.println("Escolha uma opção: ");
+            System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
 
             switch(opcao) {
                 case 1:
                     System.out.println("\n=== Animais Cadastrados ===");
                     animalController.list();
+                    System.out.println("===========================");
                     break;
                 case 2:
                     int opcao2;
@@ -34,7 +37,7 @@ public class MenuAnimal {
                         System.out.println("1. Adicionar Cachorro");
                         System.out.println("2. Adicionar Gato");
                         System.out.println("0. Voltar");
-                        System.out.println("Escolha uma opção: ");
+                        System.out.print("Escolha uma opção: ");
                         opcao2 = sc.nextInt();
                         sc.nextLine();
 
@@ -51,13 +54,23 @@ public class MenuAnimal {
                                 System.out.print("Idade: ");
                                 cachorro.setIdade(sc.nextInt());
                                 sc.nextLine();
-
+                                
                                 menuProprietario.criarProprietaio();
 
                                 animalController.create(cachorro);
                                 System.out.println("Cachorro cadastrado!");
                                 break;
                             case 2:
+
+                                System.out.println("\n=== Adicionar Gato  ===");
+                                Gato gato = new Gato();
+                                System.out.print("Nome: ");
+                                gato.setNome(sc.nextLine());
+
+                                
+
+
+
                                 break;
                             case 3:
                                 //Voltar para GerenciarAnimais.
