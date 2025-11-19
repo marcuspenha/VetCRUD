@@ -90,6 +90,8 @@ public class AnimalController {
         existente.setIdade(novoAnimal.getIdade());
         existente.setSexo(novoAnimal.getSexo());
         existente.setEspecie(novoAnimal.getEspecie());
+        existente.setSexo(novoAnimal.getSexo());
+        existente.setPeso(novoAnimal.getPeso());
 
         // Atualiza o ID do proprietário, permitindo a transferência do animal
         existente.setProprietarioId(novoAnimal.getProprietarioId());

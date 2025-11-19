@@ -21,9 +21,9 @@ public class Cachorro extends Animal { //
      * @param idade          A idade do cachorro.
      * @param proprietarioId O ID do {@link Proprietario} dono deste cachorro.
      */
-    public Cachorro(int id, String nome, int idade, String sexo, int proprietarioId) {
+    public Cachorro(int id, String nome, int idade, String sexo, float peso, String raca, int proprietarioId) {
         // Chama o construtor de Animal(id, nome, idade, especie, proprietarioId)
-        super(id, nome, idade, sexo,"Cachorro", proprietarioId); //
+        super(id, nome, idade, sexo, peso, "Cachorro", raca, proprietarioId); //
     }
 
     /**

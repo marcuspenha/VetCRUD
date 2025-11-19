@@ -21,9 +21,9 @@ public class Gato extends Animal { //
      * @param idade          A idade do gato.
      * @param proprietarioId O ID do {@link Proprietario} dono deste gato.
      */
-    public Gato(int id, String nome, int idade, String sexo, int proprietarioId) {
+    public Gato(int id, String nome, int idade, String sexo, float peso,  String raca, int proprietarioId) {
         // Chama o construtor de Animal(id, nome, idade, especie, proprietarioId)
-        super(id, nome, idade, sexo, "Gato", proprietarioId); //
+        super(id, nome, idade, sexo, peso, "Gato", raca, proprietarioId); //
     }
 
     /**

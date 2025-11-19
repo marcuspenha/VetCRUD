@@ -19,7 +19,9 @@ public abstract class Animal {
     private String nome;
     private int idade;
     private String sexo;
+    private float peso;
     private String especie;
+    private String raca;
     /**
      * Adicionado ID do proprietário para criar o relacionamento.
      * Isso permite que um Animal "saiba" quem é seu dono.
@@ -36,12 +38,14 @@ public abstract class Animal {
      * @param especie        A espécie.
      * @param proprietarioId O ID do {@link Proprietario} dono deste animal.
      */
-    public Animal(int id, String nome, int idade, String sexo, String especie, int proprietarioId) { //
+    public Animal(int id, String nome, int idade, String sexo, float peso, String especie, String raca, int proprietarioId) { //
         this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
+        this.peso = peso;
         this.especie = especie;
+        this.raca = raca;
         this.proprietarioId = proprietarioId; //
     }
 
@@ -79,12 +83,28 @@ public abstract class Animal {
         this.sexo = sexo;
     }
 
+    public float getPeso (){
+        return peso;
+    }
+
+    public void setPeso (float peso){
+        this.peso = peso;
+    }
+
     public String getEspecie() {
         return especie;
     }
 
     public void setEspecie(String especie) {
         this.especie = especie;
+    }
+
+    public String raca () {
+        return raca;
+    }
+
+    public void setRaca (String raca) {
+        this.raca = raca;
     }
 
     public int getProprietarioId() {
