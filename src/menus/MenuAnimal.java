@@ -71,7 +71,7 @@ public class MenuAnimal {
                                 gato.setIdade(sc.nextInt());
 
                                 System.out.print("Sexo: ");
-                                gato.setSexo()
+                                gato.setSexo(sc.nextLine());
 
                                 System.out.print("Espécie: ");
                                 gato.setEspecie(sc.nextLine());
