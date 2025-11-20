@@ -23,6 +23,7 @@ public class MenuPrincipal {
 
             switch(opcao) {
                 case 1:
+                    // Chama o menu de animais
                     menuAnimal.mostrarMenuAnimal();
                     break;
                 case 2:
